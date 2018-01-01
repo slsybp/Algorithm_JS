@@ -8,8 +8,7 @@ var dataModule = require("./testData.js");
  */
 function bubbleSort(numArray) {
 
-    var numbersArray = numArray;
-    const  arrayLength = numbersArray.length;
+    const  arrayLength = numArray.length;
 
     // 数组判空
     if (arrayLength === 0) {
@@ -17,7 +16,9 @@ function bubbleSort(numArray) {
         return ;
     }
 
-    for (var sortTimes = 1; sortTimes < arrayLength; sortTimes++) // 排序的次数
+  var numbersArray = numArray;
+
+  for (var sortTimes = 1; sortTimes < arrayLength; sortTimes++) // 排序的次数
     {
         for (var index = 0; index < arrayLength - sortTimes; index++) {
 
@@ -32,6 +33,7 @@ function bubbleSort(numArray) {
     }
     return numbersArray;
 }
+
 
 const bubbleSortResult = bubbleSort(dataModule.numbers);
 console.log(bubbleSortResult);

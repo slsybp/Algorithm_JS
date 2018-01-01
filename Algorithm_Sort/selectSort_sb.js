@@ -13,25 +13,22 @@ function selectSort(numArray) {
     const  arrayLength = numbersArray.length;
 
     if (arrayLength === 0) {
-        console.log(module.voidArrayLog);
+        console.log(dataModule.voidArrayLog);
         return ;
     }
 
-    for (var index = 0; index < arrayLength; index++)
-    {
+    for (var index = 0; index < arrayLength; index++) {
         for (var nextIndex = index + 1; nextIndex < arrayLength; nextIndex++) {
-
-            var beforeValue = numbersArray[index];
-            var behindValue = numbersArray[nextIndex];
-
-            if (behindValue < beforeValue) {
-                numbersArray[index] = behindValue;
-                numbersArray[nextIndex] = beforeValue;
+            if (numbersArray[nextIndex] < numbersArray[index]) {
+                var temp = numbersArray[nextIndex];
+                numbersArray[nextIndex] = numbersArray[index];
+                numbersArray[index] = temp;
             }
         }
     }
     return numbersArray;
 }
 
+console.log("原始数据：" + dataModule.numbers);
 const selectSortResult = selectSort(dataModule.numbers);
 console.log(selectSortResult);
