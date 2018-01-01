@@ -50,3 +50,5 @@ function selectSort(numArray) {
 
 const selectSortResult = selectSort(numbers);
 console.log(selectSortResult);
+console.log(selectSortResult);
+
