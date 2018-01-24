@@ -6,7 +6,6 @@ function insertSort(numArray) {
 
   let length = numArray.length;
 
-  // var firstValue = numArray[0];
   var t = 0;
 
   for (var i = 1 ; i < length ; i++) {
